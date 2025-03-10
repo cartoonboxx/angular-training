@@ -1,0 +1,51 @@
+<div class="calculator">
+
+  <ng-container *ngFor="let group of calcGroups; let i = index">
+    <div>
+
+      <select [(ngModel)]="group.first.modifiers">
+        <option [value]="modificator.value" *ngFor="let modificator of calcModifiers | keyvalue">
+          {{ modificator.value }}
+        </option>
+      </select>
+      <input type="number" class="calculator__input" [(ngModel)]="group.first.value" />
+      <select [(ngModel)]="group.operation">
+        <option [value]="operationType.value" *ngFor="let operationType of calcOperations | keyvalue">
+          {{ operationType.value }}
+        </option>
+      </select>
+      <select [(ngModel)]="group.second.modifiers">
+        <option [value]="modificator.value" *ngFor="let modificator of calcModifiers | keyvalue">
+          {{ modificator.value }}
+        </option>
+      </select>
+      <input type="number" class="calculator__input" [(ngModel)]="group.second.value" />
+
+      <button (click)="removeGroup(i)" *ngIf="i !== 0">del</button>
+    </div>
+    <select [(ngModel)]="operationsBetweenGroups[i]" *ngIf="operationsBetweenGroups.length > i">
+      <option [value]="operation.value" *ngFor="let operation of calcOperations | keyvalue">
+        {{ operation.value }}
+      </option>
+    </select>
+  </ng-container>
+
+  <span class="calculator__result">
+    {{ result ? result : 'Нажмите рассчитать' }}
+  </span>
+
+  <div class="calculator__history">
+    <span class="calculator__history-title">История операций</span>
+    <div *ngFor="let value of historyCalc; let i = index">
+
+      <span>{{i + 1}} {{ value }}</span>
+    </div>
+  </div>
+
+  <div>
+    <button class="calculator__btn" (click)="calcGroup()">Рассчитать</button>
+    <button class="calculator__btn" (click)="addGroup()">Добавить группу</button>
+  </div>
+
+
+</div>
