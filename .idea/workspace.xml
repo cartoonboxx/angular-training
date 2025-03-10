@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MessangerProject" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -21,7 +21,7 @@
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/cartoonboxx/Swoyo-test-angular.git",
+    "url": "https://github.com/cartoonboxx/angular-training.git",
     "accountId": "d5755f79-2752-44aa-803f-1bb72c5020a2"
   }
 }]]></component>
@@ -63,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741633467593</updated>
       <workItem from="1741633468636" duration="3291000" />
-      <workItem from="1741638484436" duration="7323000" />
+      <workItem from="1741638484436" duration="7624000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
